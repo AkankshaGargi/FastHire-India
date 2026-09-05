@@ -36,7 +36,7 @@ export const Route = createFileRoute("/audit")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: AuditDesk;
+  component: AuditDesk,
 });
 
 const COLORS = ["#ef4444", "#f59e0b", "#6366f1", "#10b981"];
