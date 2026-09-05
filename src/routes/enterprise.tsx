@@ -39,7 +39,7 @@ const CITIES = ["Mumbai", "Bengaluru", "Delhi", "Jaipur", "Patna", "Chennai"];
 function EnterprisePortal() {
   const [tasks, setTasks] = useState<BulkTask[]>(BULK_TASKS);
   const [batch, setBatch] = useState("");
-  const [city, setCity] = useState(CITIES[0]);
+  const [city, setCity] = useState<string>(CITIES[0]!);
   const [workers, setWorkers] = useState(40);
   const [rate, setRate] = useState(7500);
   const [uploading, setUploading] = useState(false);
