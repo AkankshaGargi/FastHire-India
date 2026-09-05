@@ -10,7 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuditRouteImport } from './routes/audit'
+import { Route as EnterpriseRouteImport } from './routes/enterprise'
 import { Route as StudentRouteImport } from './routes/student'
+import { Route as VendorRouteImport } from './routes/vendor'
 import { Route as VerifyRouteImport } from './routes/verify'
 
 const IndexRoute = IndexRouteImport.update({
@@ -18,9 +21,24 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuditRoute = AuditRouteImport.update({
+  id: '/audit',
+  path: '/audit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnterpriseRoute = EnterpriseRouteImport.update({
+  id: '/enterprise',
+  path: '/enterprise',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StudentRoute = StudentRouteImport.update({
   id: '/student',
   path: '/student',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendorRoute = VendorRouteImport.update({
+  id: '/vendor',
+  path: '/vendor',
   getParentRoute: () => rootRouteImport,
 } as any)
 const VerifyRoute = VerifyRouteImport.update({
@@ -31,31 +49,50 @@ const VerifyRoute = VerifyRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/audit': typeof AuditRoute
+  '/enterprise': typeof EnterpriseRoute
   '/student': typeof StudentRoute
+  '/vendor': typeof VendorRoute
   '/verify': typeof VerifyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/audit': typeof AuditRoute
+  '/enterprise': typeof EnterpriseRoute
   '/student': typeof StudentRoute
+  '/vendor': typeof VendorRoute
   '/verify': typeof VerifyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/audit': typeof AuditRoute
+  '/enterprise': typeof EnterpriseRoute
   '/student': typeof StudentRoute
+  '/vendor': typeof VendorRoute
   '/verify': typeof VerifyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/student' | '/verify'
+  fullPaths: '/' | '/audit' | '/enterprise' | '/student' | '/vendor' | '/verify'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/student' | '/verify'
-  id: '__root__' | '/' | '/student' | '/verify'
+  to: '/' | '/audit' | '/enterprise' | '/student' | '/vendor' | '/verify'
+  id:
+    | '__root__'
+    | '/'
+    | '/audit'
+    | '/enterprise'
+    | '/student'
+    | '/vendor'
+    | '/verify'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuditRoute: typeof AuditRoute
+  EnterpriseRoute: typeof EnterpriseRoute
   StudentRoute: typeof StudentRoute
+  VendorRoute: typeof VendorRoute
   VerifyRoute: typeof VerifyRoute
 }
 
@@ -68,11 +105,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/audit': {
+      id: '/audit'
+      path: '/audit'
+      fullPath: '/audit'
+      preLoaderRoute: typeof AuditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/enterprise': {
+      id: '/enterprise'
+      path: '/enterprise'
+      fullPath: '/enterprise'
+      preLoaderRoute: typeof EnterpriseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/student': {
       id: '/student'
       path: '/student'
       fullPath: '/student'
       preLoaderRoute: typeof StudentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendor': {
+      id: '/vendor'
+      path: '/vendor'
+      fullPath: '/vendor'
+      preLoaderRoute: typeof VendorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/verify': {
@@ -87,7 +145,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuditRoute: AuditRoute,
+  EnterpriseRoute: EnterpriseRoute,
   StudentRoute: StudentRoute,
+  VendorRoute: VendorRoute,
   VerifyRoute: VerifyRoute,
 }
 export const routeTree = rootRouteImport
