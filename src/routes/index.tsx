@@ -145,7 +145,7 @@ function Index() {
 function Report({ result }: { result: AnalysisResult }) {
   const good = result.score >= 70;
   const mid = result.score >= 40 && result.score < 70;
-  const tone = good ? "emerald" : mid ? "amber" : "rose";
+  const badgeBg = good ? "bg-emerald-500/10" : mid ? "bg-amber-500/10" : "bg-rose-500/10";
   const barColor = good ? "bg-emerald-500" : mid ? "bg-amber-500" : "bg-rose-500";
   const textColor =
     good ? "text-emerald-600" : mid ? "text-amber-600" : "text-rose-600";
@@ -159,7 +159,7 @@ function Report({ result }: { result: AnalysisResult }) {
             <p className={`text-5xl font-bold ${textColor}`}>{result.score}/100</p>
           </div>
           <span
-            className={`rounded-full px-3 py-1 text-sm font-semibold ${textColor} bg-${tone}-500/10`}
+            className={`rounded-full px-3 py-1 text-sm font-semibold ${textColor} ${badgeBg}`}
           >
             {result.verdict}
           </span>
