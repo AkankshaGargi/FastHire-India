@@ -157,7 +157,7 @@ export function analyzeJob(raw: string): AnalysisResult {
   }
 
   // Contact legitimacy
-  const domains = [...raw.matchAll(EMAIL_RE)].map((m) => m[1].toLowerCase());
+  const domains = [...raw.matchAll(EMAIL_RE)].map((m) => (m[1] ?? "").toLowerCase()).filter(Boolean);
   const corporate = domains.filter((d) => !FREE_MAIL.includes(d));
   if (corporate.length) {
     score += 8;
