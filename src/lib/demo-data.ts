@@ -1,4 +1,4 @@
-// All data in this module is SIMULATED demo data for the GovTrust AI prototype.
+// All data in this module is SIMULATED demo data for the FastHire prototype.
 // No live GSTIN / CIN / MCA / payroll integration is configured.
 
 export type MicroJob = {

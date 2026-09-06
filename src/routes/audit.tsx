@@ -21,7 +21,7 @@ import { PIN_METRICS, PAYOUT_TREND, SCAM_CATEGORIES, inr } from "@/lib/demo-data
 export const Route = createFileRoute("/audit")({
   head: () => ({
     meta: [
-      { title: "Government Audit Desk — PIN-Code Employment & Scam Risk | GovTrust AI" },
+      { title: "Government Audit Desk — PIN-Code Employment & Scam Risk | FastHire" },
       {
         name: "description",
         content:

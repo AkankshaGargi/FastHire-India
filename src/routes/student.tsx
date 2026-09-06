@@ -16,7 +16,7 @@ import { MICRO_JOBS, MY_SHIFTS, EARNINGS_TREND, inr, type MicroJob } from "@/lib
 export const Route = createFileRoute("/student")({
   head: () => ({
     meta: [
-      { title: "Student Hub — Local Micro-Jobs & Earnings | GovTrust AI" },
+      { title: "Student Hub — Local Micro-Jobs & Earnings | FastHire" },
       {
         name: "description",
         content:

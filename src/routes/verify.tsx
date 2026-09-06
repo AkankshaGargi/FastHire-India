@@ -5,13 +5,13 @@ import { analyzeJob, type AnalysisResult } from "@/lib/analyze";
 export const Route = createFileRoute("/verify")({
   head: () => ({
     meta: [
-      { title: "GovTrust AI — Verify Part-Time Job Offers in India" },
+      { title: "FastHire — Verify Part-Time Job Offers in India" },
       {
         name: "description",
         content:
           "Paste any part-time job description and get an instant AI safety score, simulated GSTIN/CIN registry checks and payment-risk analysis built for Indian students.",
       },
-      { property: "og:title", content: "GovTrust AI — Verify Part-Time Job Offers in India" },
+      { property: "og:title", content: "FastHire — Verify Part-Time Job Offers in India" },
       {
         property: "og:description",
         content:
@@ -64,7 +64,7 @@ function VerifyPage() {
             Demo registry mode
           </div>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            GovTrust <span className="text-emerald-600">AI</span>
+            Fast<span className="text-emerald-600">Hire</span>
           </h1>
           <p className="mt-3 max-w-2xl text-base text-muted-foreground">
             Paste a part-time job description and we&apos;ll score how safe it looks for students —
