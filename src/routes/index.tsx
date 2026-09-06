@@ -13,13 +13,13 @@ import { PIN_METRICS, inr } from "@/lib/demo-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "GovTrust AI — Verified Micro-Work Dashboard for India" },
+      { title: "FastHire — Verified Micro-Work Dashboard for India" },
       {
         name: "description",
         content:
           "One dashboard for students, local vendors, enterprises and government auditors: verified micro-jobs, subsidy splits, bulk field tasks and PIN-code employment metrics.",
       },
-      { property: "og:title", content: "GovTrust AI — Verified Micro-Work Dashboard for India" },
+      { property: "og:title", content: "FastHire — Verified Micro-Work Dashboard for India" },
       {
         property: "og:description",
         content:
@@ -87,7 +87,7 @@ function Home() {
             <span className="text-emerald-600">trust dashboard</span>
           </h1>
           <p className="mt-4 max-w-2xl text-base text-muted-foreground">
-            GovTrust AI connects students, neighbourhood shops, enterprises and government
+            FastHire connects students, neighbourhood shops, enterprises and government
             auditors on a single record — with an AI scam checker on every job offer.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">

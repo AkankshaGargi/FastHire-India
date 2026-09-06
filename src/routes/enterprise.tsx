@@ -16,11 +16,11 @@ import { BULK_TASKS, inr, type BulkTask } from "@/lib/demo-data";
 export const Route = createFileRoute("/enterprise")({
   head: () => ({
     meta: [
-      { title: "Enterprise Portal — Bulk Field Task Management | GovTrust AI" },
+      { title: "Enterprise Portal — Bulk Field Task Management | FastHire" },
       {
         name: "description",
         content:
-          "Upload bulk field task batches, allocate verified workers across cities and monitor SLA, budget burn and completion in the GovTrust AI enterprise dashboard.",
+          "Upload bulk field task batches, allocate verified workers across cities and monitor SLA, budget burn and completion in the FastHire enterprise dashboard.",
       },
       { property: "og:title", content: "Enterprise Portal — Bulk Field Task Management" },
       {

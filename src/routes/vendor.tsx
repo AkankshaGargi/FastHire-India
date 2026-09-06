@@ -6,7 +6,7 @@ import { VENDOR_MEMOS, inr, type Memo } from "@/lib/demo-data";
 export const Route = createFileRoute("/vendor")({
   head: () => ({
     meta: [
-      { title: "Local Vendor Registry — Gig Memos & Subsidy Split | GovTrust AI" },
+      { title: "Local Vendor Registry — Gig Memos & Subsidy Split | FastHire" },
       {
         name: "description",
         content:

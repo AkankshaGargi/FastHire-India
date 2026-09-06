@@ -5,13 +5,13 @@ import { analyzeJob, type AnalysisResult } from "@/lib/analyze";
 export const Route = createFileRoute("/verify")({
   head: () => ({
     meta: [
-      { title: "GovTrust AI — Verify Part-Time Job Offers in India" },
+      { title: "FastHire — Verify Part-Time Job Offers in India" },
       {
         name: "description",
         content:
           "Paste any part-time job description and get an instant AI safety score, simulated GSTIN/CIN registry checks and payment-risk analysis built for Indian students.",
       },
-      { property: "og:title", content: "GovTrust AI — Verify Part-Time Job Offers in India" },
+      { property: "og:title", content: "FastHire — Verify Part-Time Job Offers in India" },
       {
         property: "og:description",
         content:
