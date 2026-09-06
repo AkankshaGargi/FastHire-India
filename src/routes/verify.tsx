@@ -64,7 +64,7 @@ function VerifyPage() {
             Demo registry mode
           </div>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            GovTrust <span className="text-emerald-600">AI</span>
+            Fast<span className="text-emerald-600">Hire</span>
           </h1>
           <p className="mt-3 max-w-2xl text-base text-muted-foreground">
             Paste a part-time job description and we&apos;ll score how safe it looks for students —

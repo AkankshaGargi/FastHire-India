@@ -19,7 +19,7 @@ export function SiteNav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
         <Link to="/" className="flex items-center gap-2 font-bold text-foreground">
           <ShieldCheck className="size-5 text-emerald-600" />
-          GovTrust <span className="text-emerald-600">AI</span>
+          Fast<span className="text-emerald-600">Hire</span>
         </Link>
 
         <div className="hidden items-center gap-1 md:flex">
